@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../../model/Course';
 import { CourseService } from '../../services/course';
+import { StudentList } from "../student-list/student-list";
 
 @Component({
   selector: 'app-course',
-  imports: [],
+  imports: [StudentList],
   templateUrl: './course.html',
   styleUrl: './course.css'
 })

@@ -12,24 +12,7 @@
                 </ul>
             </div>
             <div class="card my-3">
-                <h3>ESTUDIANTES:</h3>
-                <table  class="table table-striped">
-                    <thead>
-                        <th>ID</th>
-                        <th>IDENTIFICACIÓN</th>
-                        <th>NOMBRE</th>
-                    </thead>
-                    <tbody>
-                        @for (item of course.students; track $index) {
-                        <tr>
-                            <td>{{item.id}}</td>
-                            <td>{{item.idCard}}</td>
-                            <td>{{item.name}} {{item.surname}} </td>
-                        </tr>
-                        }
-                    </tbody>
-
-                </table>
+                <student-list [items]="course.students"></student-list>
 
             </div>
         </div>

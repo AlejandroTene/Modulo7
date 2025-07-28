@@ -1,0 +1,14 @@
+<h3>ESTUDIANTES:</h3>
+<table class="table table-striped">
+    <thead>
+        <th>ID</th>
+        <th>IDENTIFICACIÓN</th>
+        <th>NOMBRE</th>
+    </thead>
+    <tbody>
+        @for (item of items; track $index) {
+            <tr student-item [item]="item"></tr>
+        }
+    </tbody>
+
+</table>
