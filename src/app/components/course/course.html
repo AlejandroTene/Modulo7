@@ -1,32 +1,37 @@
-<div>
-    <div>
-        <h2>CURSO</h2>
-        <div>
-            <ul>
-                <li>ID: {{course.id}} </li>
-                <li>NOMBRE: {{course.name}} </li>
-            </ul>
+<div class="container">
+    <div class="card my-5">
+        <div class="card-header">
+            <h2>CURSO</h2>
         </div>
-        <div>
-            <h3>ESTUDIANTES:</h3>
-            <table>
-                <thead>
-                    <th>ID</th>
-                    <th>IDENTIFICACIÓN</th>
-                    <th>NOMBRE</th>
-                </thead>
-                <tbody>
-                    @for (item of course.students; track $index) {
+
+        <div class="card-body">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item">ID: {{course.id}} </li>
+                    <li class="list-group-item">NOMBRE: {{course.name}} </li>
+                </ul>
+            </div>
+            <div class="card my-3">
+                <h3>ESTUDIANTES:</h3>
+                <table  class="table table-striped">
+                    <thead>
+                        <th>ID</th>
+                        <th>IDENTIFICACIÓN</th>
+                        <th>NOMBRE</th>
+                    </thead>
+                    <tbody>
+                        @for (item of course.students; track $index) {
                         <tr>
                             <td>{{item.id}}</td>
                             <td>{{item.idCard}}</td>
                             <td>{{item.name}} {{item.surname}} </td>
                         </tr>
-                    }
-                </tbody>
+                        }
+                    </tbody>
 
-            </table>
+                </table>
 
+            </div>
         </div>
     </div>
 </div>
